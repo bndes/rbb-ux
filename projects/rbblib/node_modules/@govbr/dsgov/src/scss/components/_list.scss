@@ -1,0 +1,122 @@
+.#{$prefix}list {
+  @include list;
+  // Cabeçalho da lista complexa
+  .header {
+    align-items: center;
+    display: flex;
+    font-size: v(font-size-scale-down-01);
+    font-weight: v(font-weight-bold);
+    justify-content: space-between;
+    padding: v(spacing-scale-base) v(spacing-scale-2x);
+  }
+  // Item da lista complexa
+  // É formado por: [support] content [support]
+  @include item($ellipsis: true);
+  .item {
+    &.active,
+    &[active] {
+      + .#{$prefix}list {
+        max-height: 200em;
+      }
+    }
+  }
+  // Lista dentro de lista
+  & & {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+  }
+
+  &[horizontal] {
+    display: flex;
+    flex-wrap: wrap;
+    .header {
+      width: 100%;
+    }
+    .item,
+    .#{$prefix}list .item {
+      height: 4em;
+      .content {
+        height: auto;
+        overflow: hidden;
+        padding: 0 v(spacing-scale-2x);
+        white-space: initial;
+        text-overflow: unset;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .col,
+    [class*="col-"] {
+      flex-grow: 0;
+      padding: 0;
+      @include media-breakpoint-down(sm) {
+        flex-basis: 100% !important;
+        max-width: 100%;
+      }
+    }
+    @include media-breakpoint-up(md) {
+      .item .support:last-child {
+        display: none;
+        pointer-events: none;
+      }
+      // evita collapse no breakpoint
+      .#{$prefix}list {
+        max-height: 200em !important;
+        background-image: none;
+      }
+    }
+  }
+
+  &[one-line] .item,
+  &[one-line] & .item {
+    height: 2em;
+    .content {
+      height: auto;
+      overflow: hidden;
+      padding: 0 v(spacing-scale-2x);
+      white-space: initial;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &[two-lines] .item,
+  &[two-lines] & .item {
+    height: 4em;
+    .content {
+      height: auto;
+      overflow: hidden;
+      padding: 0 v(spacing-scale-2x);
+      white-space: initial;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  &[three-lines] .item,
+  &[three-lines] & .item {
+    height: 6em;
+    .content {
+      height: auto;
+      overflow: hidden;
+      padding: 0 v(spacing-scale-2x);
+      white-space: initial;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+  }
+  // Componente Item
+  .#{$prefix}item {
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+  }
+}

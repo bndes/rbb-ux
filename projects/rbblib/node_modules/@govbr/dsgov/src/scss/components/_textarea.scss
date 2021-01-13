@@ -1,0 +1,31 @@
+.#{$prefix}textarea {
+  position: relative;
+  label {
+    display: inline-block;
+    padding-bottom: v(spacing-scale-half);
+  }
+  textarea {
+    @include input;
+    &[disabled] {
+      color: v(color-secondary-06);
+      background-color: v(color-secondary-03);
+      border: 1px solid v(color-secondary-06);
+      ~ .help {
+        display: none;
+      }
+    }
+  }
+  ~ .help {
+    font-size: v(font-size-scale-down-01);
+  }
+  &[valid] {
+    textarea {
+      border: 2px solid v(color-success);
+    }
+  }
+  &[invalid] {
+    textarea {
+      border: 2px solid v(color-danger);
+    }
+  }
+}

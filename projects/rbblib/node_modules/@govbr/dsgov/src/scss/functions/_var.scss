@@ -1,0 +1,8 @@
+// Créditos: https://dev.to/meduzen/write-css-variables-faster-in-scss-1mon
+@function v($var, $fallback: null) {
+  @if ($fallback) {
+    @return var(--#{$var}, #{$fallback});
+  } @else {
+    @return var(--#{$var});
+  }
+}

@@ -1,0 +1,129 @@
+// É formado por: [support] content [support]
+@mixin item($ellipsis: false) {
+  .item {
+    align-items: center;
+    display: flex;
+    @if $ellipsis {
+      height: 56px;
+    }
+    .support {
+      padding: 0 v(spacing-scale-2x);
+      &:first-child {
+        padding-right: 0;
+      }
+      &:last-child {
+        padding-left: 0;
+      }
+    }
+    // 1 - Aplicação das reticências
+    // 2 - Fix para funcionar reticências no flexbox
+    .content {
+      flex: 1;
+      padding: 0 v(spacing-scale-2x);
+      @if $ellipsis {
+        min-width: 0; // 2
+        overflow: hidden; // 1
+        text-overflow: ellipsis; // 1
+        white-space: nowrap; // 1
+        .subtitle,
+        .text,
+        .description {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .description {
+        opacity: 0.6;
+      }
+    }
+    // Aplica separador
+    &.divider,
+    &[divider] {
+      border-bottom: 1px solid v(color-secondary-04);
+    }
+    // Alturas dos itens de acordo com linhas
+    // Usar .one-line é opcional, pois é aplicado por padrão
+    @if $ellipsis {
+      &.one-line,
+      &[one-line] {
+        height: 56px;
+      }
+      &.two-lines,
+      &[two-lines] {
+        height: 72px;
+      }
+      &.three-lines,
+      &[three-lines] {
+        height: 88px;
+      }
+    }
+    // Estados
+    &.selected,
+    &[selected] {
+      background: v(status-selected-background);
+      color: v(status-selected-text);
+    }
+    &.highlighted,
+    &[highlighted] {
+      background: v(status-highlight-background)
+        linear-gradient(
+          v(status-highlight-overlay),
+          v(status-highlight-overlay)
+        );
+      color: v(status-highlight-text);
+    }
+    &:disabled,
+    &[disabled] {
+      opacity: 0.65;
+    }
+  }
+  // Remover estilo de links e botões
+  a.item,
+  button.item {
+    background: transparent;
+    border: 0;
+    color: v(text-color);
+    padding: 0;
+    text-align: left;
+    width: 100%;
+    &:not([disabled]) {
+      @include focus;
+      @include hover;
+      @include active;
+      &:active,
+      &.active,
+      &[active] {
+        background: v(status-activated-background);
+        color: v(status-activated-text);
+      }
+    }
+  }
+  // Versão densidade
+  @if $ellipsis {
+    &.condensed,
+    &[condensed] {
+      .item {
+        height: 48px;
+        @include media-breakpoint-up(md) {
+          height: 32px;
+        }
+        &.one-line,
+        &[one-line] {
+          height: 48px;
+          @include media-breakpoint-up(md) {
+            height: 32px;
+          }
+        }
+        &.two-lines,
+        &[two-lines] {
+          height: 56px;
+        }
+        &.three-lines,
+        &[three-lines] {
+          height: 72px;
+        }
+      }
+    }
+  }
+}

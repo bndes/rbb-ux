@@ -1,0 +1,155 @@
+.#{$prefix}radio {
+  display: block;
+  vertical-align: top;
+  input[type='radio'] {
+    // Remover o checkbox padrão do navegador
+    opacity: 0;
+    position: absolute;
+    //Focus
+    &:focus {
+      &:checked + label:before,
+      & + label::before {
+        background: v(status-highlight-background)
+          linear-gradient(v(status-focused-overlay), v(status-focused-overlay)) !important;
+      }
+    }
+    //hover
+    &:hover:not(:disabled) {
+      & + label::before {
+        border: 1px solid v(color-secondary-06, $color-secondary-06);
+        box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-01), 0.45);
+      }
+    }
+    // Disabled
+    &:disabled + label {
+      cursor: not-allowed;
+      color: v(color-secondary-04);
+    }
+
+    // Descritive Text
+    & + label {
+      align-items: flex-start;
+      color: v(color-secondary-08);
+      cursor: pointer;
+      font-weight: v(font-weight-medium);
+      display: inline-block;
+      min-height: v(spacing-scale-3x);
+      padding: v(spacing-scale-half) v(spacing-scale-4x) v(spacing-scale-base) v(spacing-scale-4x);
+      position: relative;
+      font-size: v(font-size-scale-up-01);
+
+      // Box
+      &:before {
+        background: v(color-secondary-01);
+        border: 1px solid v(color-secondary-04);
+        border-radius: 50%;
+        content: '';
+        height: v(spacing-scale-3x);
+        left: 0;
+        position: absolute;
+        width: v(spacing-scale-3x);
+        padding: v(spacing-scale-half) v(spacing-scale-base) v(spacing-scale-half) 0;
+      }
+    }
+
+    &:checked + label::after {
+      background: v(color-primary-lighten-01);
+      border: 7px solid v(color-primary-lighten-01);
+      border-radius: 50%;
+      bottom: 0;
+      content: '';
+      height: 10px;
+      left: 5px;
+      position: absolute;
+      right: 0;
+      top: 9px;
+      transform: scale(0.9, 0.9);
+      width: 10px;
+    }
+
+    // Inválid
+    &:invalid {
+      & + label::before {
+        border-color: v(color-danger);
+        border-width: 2px;
+      }
+    }
+    // Disabled
+    &:disabled + label::before {
+      background-color: v(color-secondary-03);
+    }
+    &:disabled:checked + label::before {
+      background: v(color-secondary-06);
+      border-color: v(color-secondary-06);
+    }
+    &:disabled:checked + label::after {
+      background: v(color-secondary-06);
+    }
+  }
+  // Estados(States)
+  @each $state, $color in (invalid, $color-danger), (valid, $color-success) {
+    &.is-#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &.#{$state}:not(.is-inverted):not(.inverted):not([inverted]),
+    &[#{$state}]:not(.is-inverted):not(.inverted):not([inverted]) {
+      input[type='radio'] {
+        & + label::before {
+          border-color: $color;
+          @if ($state == 'invalid') {
+            border-color: v(color-danger);
+            border-width: 2px;
+          }
+          @if ($state == 'valid') {
+            border-color: v(color-success) !important;
+            border-width: 2px;
+          }
+        }
+        // Checado
+        &:checked + label::before {
+          // background: $color;
+          border-color: $color;
+        }
+        &:checked + label::after {
+          border-color: $color;
+        }
+        //focus
+        &:focus {
+          &:checked + label:before,
+          & + label:before {
+            background: v(status-highlight-background)
+              linear-gradient(v(status-focused-overlay), v(status-focused-overlay)) !important;
+            border-color: $color;
+          }
+        }
+        // Hover
+        &:hover:not(:disabled) + label::before {
+          box-shadow: 0 0 0 5px rgba(var(--rgb-primary-lighten-02), 0.45);
+          border-width: 2px;
+        }
+      }
+    }
+  }
+
+  // Versão pequena
+  &.is-small,
+  &.small,
+  &[small] {
+    input[type='radio'] {
+      // Texto
+      & + label {
+        line-height: v(spacing-scale-2xh);
+        min-height: v(spacing-scale-2xh);
+      }
+      // Caixa
+      & + label::before {
+        height: v(spacing-scale-2xh);
+        width: v(spacing-scale-2xh);
+      }
+      // Checado
+      &:checked + label::after {
+        border-width: 4px;
+        height: 10px;
+        width: 10px;
+      }
+    }
+  }
+}

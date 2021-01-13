@@ -1,0 +1,32 @@
+// Criar cores de fundo
+@mixin bg-token-colors($item, $value) {
+  .background-#{$item} {
+    background-color: v($item, $value) !important;
+  }
+}
+
+@mixin bg-colors($item, $value) {
+  .bg-#{$item} {
+    background-color: v($item, $value) !important;
+  }
+}
+
+// Criar cores de textos
+@mixin text-token-colors($item, $value) {
+  .#{$item} {
+    color: v($item, $value) !important;
+  }
+}
+
+@mixin text-colors($item, $value) {
+  .text-#{$item} {
+    color: v($item, $value) !important;
+  }
+}
+
+// Criar cores de bordas
+@mixin border-colors($item, $value) {
+  .border-#{$item} {
+    border-color: v($item, $value) !important;
+  }
+}

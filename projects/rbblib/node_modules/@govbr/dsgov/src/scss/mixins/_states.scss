@@ -1,0 +1,19 @@
+@mixin hover {
+  &:hover {
+    background: v(status-hover-background);
+  }
+}
+
+@mixin focus {
+  &:focus {
+    background: v(status-focused-background)
+      linear-gradient(v(status-focused-overlay), v(status-focused-overlay));
+  }
+}
+
+@mixin active {
+  &:active {
+    background: v(status-pressed-background);
+    color: v(status-pressed-text);
+  }
+}

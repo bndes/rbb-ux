@@ -1,0 +1,65 @@
+// Destacado
+$status-highlight-overlay: rgba(var(--rgb-support-03), 0.1);
+$status-highlight-background: var(--color-secondary-01);
+$status-highlight-text: var(--color-support-03);
+// Interativo
+$status-enabled-text: var(--color-primary-default);
+$status-enabled-text-darken: var(--color-secondary-01);
+// Desativado
+$status-disabled-background: rgba(var(--rgb-secondary-03), 0.45);
+$status-disabled-text: rgba(var(--rgb-secondary-04), 0.45);
+// Hover
+$status-hover-background: var(--color-primary-pastel-02);
+// Pressionado
+$status-pressed-background: var(--color-primary-darken-02);
+$status-pressed-text: var(--color-primary-pastel-01);
+// Foco
+$status-focused-overlay: rgba(var(--rgb-support-02), 0.3);
+$status-focused-background: var(--color-secondary-01);
+// Ativo
+$status-activated-background: var(--color-primary-darken-01);
+$status-activated-text: var(--color-secondary-01);
+// Selecionado
+$status-selected-background: var(--color-primary-lighten-01);
+$status-selected-text: var(--color-secondary-01);
+// Arrastado
+$status-dragged-background: var(--color-secondary-03);
+$status-dragged-text: var(--color-secondary-08);
+$status-dragged-shadow: rgba(var(--rgb-secondary-09), 0.16);
+// Visitado
+$status-visited-background: var(--color-primary-pastel-01);
+$status-visited-text: var(--color-primary-darken-01);
+// Ligado
+$status-on-background: var(--color-primary-lighten-02);
+$status-on-text: var(--color-secondary-01);
+// Desligado
+$status-off-background: var(--color-secondary-04);
+$status-off-text: var(--color-secondary-07);
+
+$tokens-status: (
+  status-highlight-overlay: $status-highlight-overlay,
+  status-highlight-background: $status-highlight-background,
+  status-highlight-text: $status-highlight-text,
+  status-enabled-text: $status-enabled-text,
+  status-enabled-text-darken: $status-enabled-text-darken,
+  status-disabled-background: $status-disabled-background,
+  status-disabled-text: $status-disabled-text,
+  status-hover-background: $status-hover-background,
+  status-pressed-background: $status-pressed-background,
+  status-pressed-text: $status-pressed-text,
+  status-focused-overlay: $status-focused-overlay,
+  status-focused-background: $status-focused-background,
+  status-activated-background: $status-activated-background,
+  status-activated-text: $status-activated-text,
+  status-selected-background: $status-selected-background,
+  status-selected-text: $status-selected-text,
+  status-dragged-background: $status-dragged-background,
+  status-dragged-text: $status-dragged-text,
+  status-dragged-shadow: $status-dragged-shadow,
+  status-visited-background: $status-visited-background,
+  status-visited-text: $status-visited-text,
+  status-on-background: $status-on-background,
+  status-on-text: $status-on-text,
+  status-off-background: $status-off-background,
+  status-off-text: $status-off-text,
+);

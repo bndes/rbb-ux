@@ -1,0 +1,3 @@
+@function get-rgb($var) {
+  @return red($var), green($var), blue($var);
+}

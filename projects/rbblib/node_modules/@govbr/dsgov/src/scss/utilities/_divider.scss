@@ -1,0 +1,19 @@
+.#{$prefix}divider {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0; 
+  border-top: 1px solid v(color-secondary-04, $color-secondary-04);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  width: 100%;
+  &.fundo-neutro{
+    border-top: 1px solid v(color-secondary-01, $color-secondary-01);
+    margin: 1em 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    width: 100%;
+  }
+}  

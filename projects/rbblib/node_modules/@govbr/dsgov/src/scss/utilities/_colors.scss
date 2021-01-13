@@ -1,0 +1,10 @@
+@each $item, $value in $tokens-colors {
+  @include text-token-colors($item, $value);
+  @include bg-token-colors($item, $value);
+  @include border-colors($item, $value);
+}
+
+@each $item, $value in $br-colors {
+  @include text-colors($item, $value);
+  @include bg-colors($item, $value);
+}

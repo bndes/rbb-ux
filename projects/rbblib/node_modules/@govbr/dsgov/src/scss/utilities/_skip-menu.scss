@@ -1,0 +1,21 @@
+// Atalhos para conteúdo
+.skip-menu {
+  list-style: none;
+  position: absolute;
+  a {
+    position: absolute;
+    top: -200em;
+    white-space: nowrap;
+    &:focus {
+      @include button;
+      align-items: center;
+      background: v(color-highlight, $color-highlight);
+      color: v(color-secondary-01, $color-secondary-01);
+      display: inline-flex;
+      left: 0;
+      text-decoration: none;
+      top: 0;
+      z-index: 11;
+    }
+  }
+}

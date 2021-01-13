@@ -1,0 +1,5 @@
+@mixin tokens($map) {
+  @each $index, $value in $map {
+    --#{$index}: #{$value};
+  }
+}

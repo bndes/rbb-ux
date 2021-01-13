@@ -1,0 +1,12 @@
+// Gera uma classe para display ou visibilidade de grid
+@mixin display($display, $className, $breakpoint: false) {
+  @if $breakpoint {
+    .#{$className}-#{$breakpoint} {
+      display: #{$display} !important;
+    }
+  } @else {
+    .#{$className} {
+      display: #{$display} !important;
+    }
+  }
+}

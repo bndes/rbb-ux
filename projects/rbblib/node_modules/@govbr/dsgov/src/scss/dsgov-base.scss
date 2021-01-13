@@ -1,0 +1,16 @@
+/*!
+ * DSGov: Design System de Governo
+ * Versão beta
+ * Suporte:
+   - Serpro: DIDES/SUPSE/SESEP
+ */
+
+// Carregar configurações
+@import "base";
+
+// Gerar tokens
+@import "_tokens.scss";
+
+@import "utilities";
+
+@import "templates";

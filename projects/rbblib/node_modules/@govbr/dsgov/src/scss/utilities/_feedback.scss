@@ -1,0 +1,13 @@
+// Feedback
+.feedback {
+  // background: transparent;
+  // border: 0;
+  // display: flex;
+  font-style: italic;
+  font-weight: v(font-weight-medium, $font-weight-medium);
+  margin-bottom: v(spacing-scale-2x);
+  padding: 0;
+  .icon {
+    padding-right: v(spacing-scale-half);
+  }
+}

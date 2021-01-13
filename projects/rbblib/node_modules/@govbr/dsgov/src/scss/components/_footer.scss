@@ -1,0 +1,40 @@
+.#{$prefix}footer {
+  --text-color: var(--color-secondary-01);
+  --status-focused-background: var(--color-primary-darken-01);
+  --status-hover-background: var(--color-primary-darken-01);
+  background: v(color-primary-darken-02);
+  color: v(color-secondary-01);
+  display: block;
+  .logo {
+    padding: v(spacing-scale-6x) 0 v(spacing-scale-4x);
+    img {
+      max-height: 48px;
+      max-width: 180px;
+    }
+  }
+  .assigns {
+    img {
+      max-height: 46px;
+      max-width: 180px;
+    }
+  }
+  .social-network {
+    border: 0;
+  }
+  &[inverted],
+  &.inverted {
+    --text-color: var(--color-primary-darken-02);
+    --status-focused-background: var(--color-secondary-01);
+    --status-hover-background: var(--color-primary-pastel-02);
+    background: v(color-secondary-01);
+    border-top: 1px solid v(color-secondary-04);
+    color: v(color-primary-darken-02);
+  }
+
+  @include media-breakpoint-up(md) {
+    .#{$prefix}list .item .support {
+      display: none;
+      pointer-events: none;
+    }
+  }
+}

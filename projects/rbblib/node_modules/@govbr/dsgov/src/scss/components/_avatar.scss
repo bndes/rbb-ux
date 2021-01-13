@@ -1,0 +1,97 @@
+.#{$prefix}avatar {
+  display: inline-block;
+
+  .change {
+    background: transparent;
+    border: 0;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+
+    .icon {
+      bottom: 0;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .image {
+    background-color: v(color-primary-pastel-02);
+    border: 0;
+    border-radius: 50%;
+    color: v(color-primary-pastel-01);
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    width: 40px;
+
+    img {
+      height: 40px;
+      width: 40px;
+    }
+
+    @include icon {
+      --icon-size: var(--icon-size-2x);
+      margin-top: 0.25em;
+    }
+  }
+
+  &.is-medium,
+  &.medium,
+  &[medium] {
+    .change {
+      .svg-inline--fa,
+      .fa,
+      .fab,
+      .fad,
+      .fal,
+      .far,
+      .fas {
+        --icon-size: var(--icon-size-2x);
+      }
+    }
+
+    .image {
+      height: 100px;
+      width: 100px;
+
+      img {
+        height: 100px;
+        width: 100px;
+      }
+
+      @include icon-size(v(icon-size-5x));
+    }
+  }
+
+  &.is-large,
+  &.large,
+  &[large] {
+    .change {
+      .svg-inline--fa,
+      .fa,
+      .fab,
+      .fad,
+      .fal,
+      .far,
+      .fas {
+        --icon-size: var(--icon-size-3x);
+      }
+    }
+
+    .image {
+      height: 160px;
+      width: 160px;
+
+      img {
+        height: 160px;
+        width: 160px;
+      }
+
+      @include icon-size(v(icon-size-8x));
+    }
+  }
+}

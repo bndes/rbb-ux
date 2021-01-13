@@ -1,0 +1,69 @@
+.#{$prefix}breadcrumb {
+  align-items: center;
+  display: flex;
+  // Página inicial
+  .crumb-list {
+    align-items: center;
+    border: none;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    // Cada item
+    .crumb {
+      align-items: center;
+      display: flex;
+      height: v(spacing-scale-4x);
+      .icon {
+        color: v(color-secondary-04);
+        font-size: v(icon-size-sm);
+      }
+      a {
+        color: v(color-primary-default);
+        cursor: pointer;
+        font-size: v(font-size-scale-down-02);
+        font-weight: v(font-weight-medium);
+        padding: 0;
+        text-decoration: none;
+        white-space: nowrap;
+        @include focus;
+        @include hover;
+        @include active;
+      }
+      &.home {
+        align-items: center;
+        display: flex;
+        .icon {
+          color: v(color-primary-default);
+          position: static;
+        }
+      }
+      &[expand] {
+        .icon {
+          font-size: v(icon-size-sm);
+        }
+      }
+      // Item ativo
+      &[active] {
+        color: v(color-secondary-08);
+        cursor: default;
+        font-size: v(font-size-scale-down-02);
+        font-weight: v(font-weight-bold);
+        white-space: nowrap;
+      }
+    }
+    &::-webkit-scrollbar {
+      height: v(spacing-scale-base);
+    }
+    &::-webkit-scrollbar-track {
+      background: v(color-secondary-04);
+      border-radius: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: v(color-secondary-05);
+      border-radius: 0;
+    }
+  }
+}

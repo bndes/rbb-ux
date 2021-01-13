@@ -1,0 +1,217 @@
+// Primário
+$color-primary-pastel-01: #c5d4eb;
+$color-primary-pastel-02: #dbe8fb;
+$color-primary-lighten-01: #2670e8;
+$color-primary-lighten-02: #5992ed;
+$color-primary-default: #1351b4;
+$color-primary-darken-01: #0c326f;
+$color-primary-darken-02: #071d41;
+$rgb-primary-pastel-01: get-rgb($color-primary-pastel-01);
+$rgb-primary-pastel-02: get-rgb($color-primary-pastel-02);
+$rgb-primary-lighten-01: get-rgb($color-primary-lighten-01);
+$rgb-primary-lighten-02: get-rgb($color-primary-lighten-02);
+$rgb-primary-default: get-rgb($color-primary-default);
+$rgb-primary-darken-01: get-rgb($color-primary-darken-01);
+$rgb-primary-darken-02: get-rgb($color-primary-darken-02);
+
+// Secundário
+$color-secondary-01: #fff;
+$color-secondary-02: #f8f8f8;
+$color-secondary-03: #ededed;
+$color-secondary-04: #ccc;
+$color-secondary-05: #9e9d9d;
+$color-secondary-06: #888;
+$color-secondary-07: #555;
+$color-secondary-08: #333;
+$color-secondary-09: #000;
+$rgb-secondary-01: get-rgb($color-secondary-01);
+$rgb-secondary-02: get-rgb($color-secondary-02);
+$rgb-secondary-03: get-rgb($color-secondary-03);
+$rgb-secondary-04: get-rgb($color-secondary-04);
+$rgb-secondary-05: get-rgb($color-secondary-05);
+$rgb-secondary-06: get-rgb($color-secondary-06);
+$rgb-secondary-07: get-rgb($color-secondary-07);
+$rgb-secondary-08: get-rgb($color-secondary-08);
+$rgb-secondary-09: get-rgb($color-secondary-09);
+
+// Destaque
+$color-highlight: #268744;
+$rgb-highlight: get-rgb($color-highlight);
+
+// Estados
+$color-warning: #ffcd07;
+$color-success: #168821;
+$color-danger: #e60000;
+$color-info: #155bcb;
+$rgb-warning: get-rgb($color-warning);
+$rgb-success: get-rgb($color-success);
+$rgb-danger: get-rgb($color-danger);
+$rgb-info: get-rgb($color-info);
+
+// Suporte
+$color-support-01: #36a191;
+$color-support-02: #f2e317;
+$color-support-03: #d84800;
+$color-support-04: #a26739;
+$color-support-05: #40e0d0;
+$color-support-06: #48cbeb;
+$color-support-07: #c72487;
+$color-support-08: #63007f;
+$color-support-09: #f08080;
+$color-support-10: #ff8c00;
+$color-support-11: #fdf5e6;
+$rgb-support-01: get-rgb($color-support-01);
+$rgb-support-02: get-rgb($color-support-02);
+$rgb-support-03: get-rgb($color-support-03);
+$rgb-support-04: get-rgb($color-support-04);
+$rgb-support-05: get-rgb($color-support-05);
+$rgb-support-06: get-rgb($color-support-06);
+$rgb-support-07: get-rgb($color-support-07);
+$rgb-support-08: get-rgb($color-support-08);
+$rgb-support-09: get-rgb($color-support-09);
+$rgb-support-10: get-rgb($color-support-10);
+$rgb-support-11: get-rgb($color-support-11);
+
+// Brands
+$color-facebook: #3b5998;
+$color-google-plus: #db4a39;
+$color-linkedin: #0e76a8;
+$color-twitter: #00acee;
+$color-whatsapp: #25d366;
+$color-xbox: #9bc848;
+$color-yahoo: #720e9e;
+$color-youtube: #c4302b;
+$rgb-facebook: get-rgb($color-facebook);
+$rgb-google-plus: get-rgb($color-google-plus);
+$rgb-linkedin: get-rgb($color-linkedin);
+$rgb-twitter: get-rgb($color-twitter);
+$rgb-whatsapp: get-rgb($color-whatsapp);
+$rgb-xbox: get-rgb($color-xbox);
+$rgb-yahoo: get-rgb($color-yahoo);
+$rgb-youtube: get-rgb($color-youtube);
+
+$br-colors: (
+  primary-pastel-01: $color-primary-pastel-01,
+  primary-pastel-02: $color-primary-pastel-02,
+  primary-lighten-01: $color-primary-lighten-01,
+  primary-lighten-02: $color-primary-lighten-02,
+  primary-default: $color-primary-default,
+  primary-darken-01: $color-primary-darken-01,
+  primary-darken-02: $color-primary-darken-02,
+  secondary-01: $color-secondary-01,
+  secondary-02: $color-secondary-02,
+  secondary-03: $color-secondary-03,
+  secondary-04: $color-secondary-04,
+  secondary-05: $color-secondary-05,
+  secondary-06: $color-secondary-06,
+  secondary-07: $color-secondary-07,
+  secondary-08: $color-secondary-08,
+  secondary-09: $color-secondary-09,
+  highlight: $color-highlight,
+  success: $color-success,
+  warning: $color-warning,
+  danger: $color-danger,
+  info: $color-info,
+  support-01: $color-support-01,
+  support-02: $color-support-02,
+  support-03: $color-support-03,
+  support-04: $color-support-04,
+  support-05: $color-support-05,
+  support-06: $color-support-06,
+  support-07: $color-support-07,
+  support-08: $color-support-08,
+  support-09: $color-support-09,
+  support-10: $color-support-10,
+  support-11: $color-support-11,
+  facebook: $color-facebook,
+  google-plus: $color-google-plus,
+  linkedin: $color-linkedin,
+  twitter: $color-twitter,
+  whatsapp: $color-whatsapp,
+  xbox: $color-xbox,
+  yahoo: $color-yahoo,
+  youtube: $color-youtube,
+);
+
+$tokens-colors: (
+  color-primary-pastel-01: $color-primary-pastel-01,
+  color-primary-pastel-02: $color-primary-pastel-02,
+  color-primary-lighten-01: $color-primary-lighten-01,
+  color-primary-lighten-02: $color-primary-lighten-02,
+  color-primary-default: $color-primary-default,
+  color-primary-darken-01: $color-primary-darken-01,
+  color-primary-darken-02: $color-primary-darken-02,
+  rgb-primary-pastel-01: $rgb-primary-pastel-01,
+  rgb-primary-pastel-02: $rgb-primary-pastel-02,
+  rgb-primary-lighten-01: $rgb-primary-lighten-01,
+  rgb-primary-lighten-02: $rgb-primary-lighten-02,
+  rgb-primary-default: $rgb-primary-default,
+  rgb-primary-darken-01: $rgb-primary-darken-01,
+  rgb-primary-darken-02: $rgb-primary-darken-02,
+  color-secondary-01: $color-secondary-01,
+  color-secondary-02: $color-secondary-02,
+  color-secondary-03: $color-secondary-03,
+  color-secondary-04: $color-secondary-04,
+  color-secondary-05: $color-secondary-05,
+  color-secondary-06: $color-secondary-06,
+  color-secondary-07: $color-secondary-07,
+  color-secondary-08: $color-secondary-08,
+  color-secondary-09: $color-secondary-09,
+  rgb-secondary-01: $rgb-secondary-01,
+  rgb-secondary-02: $rgb-secondary-02,
+  rgb-secondary-03: $rgb-secondary-03,
+  rgb-secondary-04: $rgb-secondary-04,
+  rgb-secondary-05: $rgb-secondary-05,
+  rgb-secondary-06: $rgb-secondary-06,
+  rgb-secondary-07: $rgb-secondary-07,
+  rgb-secondary-08: $rgb-secondary-08,
+  rgb-secondary-09: $rgb-secondary-09,
+  color-highlight: $color-highlight,
+  rgb-highlight: $rgb-highlight,
+  color-success: $color-success,
+  color-warning: $color-warning,
+  color-danger: $color-danger,
+  color-info: $color-info,
+  rgb-success: $rgb-success,
+  rgb-warning: $rgb-warning,
+  rgb-danger: $rgb-danger,
+  rgb-info: $rgb-info,
+  color-support-01: $color-support-01,
+  color-support-02: $color-support-02,
+  color-support-03: $color-support-03,
+  color-support-04: $color-support-04,
+  color-support-05: $color-support-05,
+  color-support-06: $color-support-06,
+  color-support-07: $color-support-07,
+  color-support-08: $color-support-08,
+  color-support-09: $color-support-09,
+  color-support-10: $color-support-10,
+  color-support-11: $color-support-11,
+  rgb-support-01: $rgb-support-01,
+  rgb-support-02: $rgb-support-02,
+  rgb-support-03: $rgb-support-03,
+  rgb-support-04: $rgb-support-04,
+  rgb-support-05: $rgb-support-05,
+  rgb-support-06: $rgb-support-06,
+  rgb-support-07: $rgb-support-07,
+  rgb-support-08: $rgb-support-08,
+  rgb-support-09: $rgb-support-09,
+  rgb-support-10: $rgb-support-10,
+  rgb-support-11: $rgb-support-11,
+  color-facebook: $color-facebook,
+  color-google-plus: $color-google-plus,
+  color-linkedin: $color-linkedin,
+  color-twitter: $color-twitter,
+  color-whatsapp: $color-whatsapp,
+  color-xbox: $color-xbox,
+  color-yahoo: $color-yahoo,
+  color-youtube: $color-youtube,
+  rgb-facebook: $rgb-facebook,
+  rgb-google-plus: $rgb-google-plus,
+  rgb-linkedin: $rgb-linkedin,
+  rgb-twitter: $rgb-twitter,
+  rgb-whatsapp: $rgb-whatsapp,
+  rgb-xbox: $rgb-xbox,
+  rgb-yahoo: $rgb-yahoo,
+  rgb-youtube: $rgb-youtube,
+);

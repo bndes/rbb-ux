@@ -1,0 +1,13 @@
+// Pesos
+@each $key, $value in $text-font-weight {
+  .text-#{"" + $key} {
+    font-weight: $value;
+  }
+}
+
+// Tamanhos
+@each $key, $value in $text-font-size {
+  .text-#{"" + $key} {
+    font-size: calc(#{v(font-size-scale-base)} * #{$value});
+  }
+}
