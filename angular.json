@@ -3,166 +3,45 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rbblib": {
+    "rbbux": {
       "projectType": "library",
-      "root": "projects/rbblib",
-      "sourceRoot": "projects/rbblib/src",
+      "root": "projects/rbbux",
+      "sourceRoot": "projects/rbbux/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/rbblib/tsconfig.lib.json",
-            "project": "projects/rbblib/ng-package.json"
+            "tsConfig": "projects/rbbux/tsconfig.lib.json",
+            "project": "projects/rbbux/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/rbblib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/rbbux/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/rbblib/src/test.ts",
-            "tsConfig": "projects/rbblib/tsconfig.spec.json",
-            "karmaConfig": "projects/rbblib/karma.conf.js"
+            "main": "projects/rbbux/src/test.ts",
+            "tsConfig": "projects/rbbux/tsconfig.spec.json",
+            "karmaConfig": "projects/rbbux/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/rbblib/tsconfig.lib.json",
-              "projects/rbblib/tsconfig.spec.json"
+              "projects/rbbux/tsconfig.lib.json",
+              "projects/rbbux/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        }
-      }
-    },
-    "rbbexample": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/rbbexample",
-      "sourceRoot": "projects/rbbexample/src",
-      "prefix": "app",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/rbbexample",
-            "index": "projects/rbbexample/src/index.html",
-            "main": "projects/rbbexample/src/main.ts",
-            "polyfills": "projects/rbbexample/src/polyfills.ts",
-            "tsConfig": "projects/rbbexample/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "projects/rbbexample/src/favicon.ico",
-              "projects/rbbexample/src/assets"
-            ],
-            "styles": [
-              "projects/rbbexample/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/rbbexample/src/environments/environment.ts",
-                  "with": "projects/rbbexample/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "rbbexample:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "rbbexample:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "rbbexample:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/rbbexample/src/test.ts",
-            "polyfills": "projects/rbbexample/src/polyfills.ts",
-            "tsConfig": "projects/rbbexample/tsconfig.spec.json",
-            "karmaConfig": "projects/rbbexample/karma.conf.js",
-            "assets": [
-              "projects/rbbexample/src/favicon.ico",
-              "projects/rbbexample/src/assets"
-            ],
-            "styles": [
-              "projects/rbbexample/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/rbbexample/tsconfig.app.json",
-              "projects/rbbexample/tsconfig.spec.json",
-              "projects/rbbexample/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/rbbexample/e2e/protractor.conf.js",
-            "devServerTarget": "rbbexample:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "rbbexample:serve:production"
-            }
           }
         }
       }
     }},
-  "defaultProject": "rbblib"
+  "defaultProject": "rbbux"
 }

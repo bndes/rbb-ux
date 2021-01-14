@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "rbblib": [
-        "dist/rbblib/rbblib",
-        "dist/rbblib"
+      "rbbux": [
+        "dist/rbbux/rbbux",
+        "dist/rbbux"
       ]
     }
   }
