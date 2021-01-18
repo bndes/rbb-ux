@@ -58,9 +58,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     RouterModule,
     HttpClientModule,
 
-
+    MatSidenavModule,
     BrowserAnimationsModule,
-    ClipboardModule,
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
