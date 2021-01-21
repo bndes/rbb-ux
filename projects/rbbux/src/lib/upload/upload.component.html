@@ -1,1 +1,13 @@
-<p>upload works!</p>
+<body>
+<div class="br-upload" style="margin-top: 30px; margin-right: 100px;" >
+  <button id="btArquivo"  (click)="fileInput.click()" class=" br-button upload-button"><i class="fas fa-upload"></i>Upload</button>
+
+  <input type="file" id="arquivo"  accept=".pdf" #fileInput ng2FileSelect [uploader]="this.fileHandleService.uploader" (change)="this.fileHandleService.chamaUpload()"/>
+
+  <div class="msg-hash-declaracao" *ngIf="hashdeclaracao">
+      Hash da Declaração: {{hashdeclaracao}}
+  </div>
+  <div class="upload-list"></div>
+</div>
+</body>
+

@@ -12,7 +12,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
   usuario : any;
   selectedAccount : any;
@@ -139,12 +138,6 @@ export class HeaderComponent implements OnInit {
 conectar () {
   this.ethereum.enable();
 }
-
-
-  toggleSideBar(){
-    this.toggleSideBarForMe.emit();
-  }
-
 
   async getPJInfo(address: string): Promise<any> {
     let result = await this.RBBRegistrySmartContract.getRegistry(address);
