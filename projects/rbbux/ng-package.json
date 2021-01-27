@@ -3,5 +3,8 @@
   "dest": "../../dist/rbbux",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": [
+    "."
+  ]
 }

@@ -6,10 +6,9 @@
     "@angular/core": "^10.2.4"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1002.1",
+    "tslib": "^2.0.0",
+    "ethers": "^5.0.26",
+    "ng2-file-upload": "^1.4.0",
     "@angular/animations": "^10.2.4",
     "@angular/cdk": "^11.0.4",
     "@angular/cli": "~10.2.0",

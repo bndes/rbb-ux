@@ -20,5 +20,5 @@ IMPORTANTE: A cada alteração na biblioteca, esse processo deverá ser repetido
 1. Copiar o .tgz gerado na raiz do projeto, e utilizar `npm i rbbux-version.tgz`
 2. No projeto onde a biblioteca será utilizada, rodar:
     `npm i ethers` |  `npm i @angular/material`  |  `npm i @angular/cdk`
- 
-3. Para utilizar os componentes da biblioteca em outras aplicações chamar usando o seletor específico de cada componente
+3. Realizar o import do Rbbuxmodule no projeto.
+4. Para utilizar os componentes da biblioteca em outras aplicações chamar usando o seletor específico de cada componente

@@ -28,7 +28,7 @@
     "@angular/cdk": "^11.0.4",
     "@angular/cli": "~10.2.0",
     "@angular/compiler-cli": "~10.2.0",
-    "@angular/material": "^11.0.4",
+    "@angular/material": "^11.1.0",
     "@govbr/dsgov": "file:dsgov-latest.tgz",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
