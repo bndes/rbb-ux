@@ -7,6 +7,9 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [RbbuxComponent, HeaderComponent, FooterComponent, UploadComponent],
@@ -14,7 +17,10 @@ import {MatListModule} from '@angular/material/list';
     RouterModule,
     HttpClientModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    CommonModule,
+    BrowserModule,
+    FileUploadModule
   ],
   exports: [RbbuxComponent, HeaderComponent, FooterComponent, UploadComponent]
 })

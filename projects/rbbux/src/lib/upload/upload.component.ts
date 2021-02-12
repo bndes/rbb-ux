@@ -14,18 +14,19 @@ import { Observable } from 'rxjs';
 })
 export class UploadComponent implements OnInit {
 
-  public static serverUrl: string = environment.serverUrl;
+
 
   serverUrl: string;
   operationAPIURL: string;
   maxFileSize : number;
   CAMINHO_MODELO_DECLARACAO_CONTA_DIGITAL: string;
   CAMINHO_ROTEIRO_ASSINATURA_DIGITAL: string;
+  hashdeclaracao: string;
 
   public uploader: FileUploader;
 
   constructor(private http: HttpClient) {
-
+    this.serverUrl = environment.serverUrl;
     this.http.post<Object>(this.serverUrl + 'constantesFrontPJ', {}).subscribe(
 
       data => {
