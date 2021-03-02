@@ -1,7 +1,7 @@
 /*
  * Public API Surface of rbbux
  */
-
+export * from './lib/rbbux-config';
 export * from './lib/rbbux.service';
 export * from './lib/rbbux.component';
 export * from './lib/rbbux.module';
